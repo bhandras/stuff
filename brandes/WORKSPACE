@@ -1,0 +1,23 @@
+workspace(name = "personal")
+
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+
+http_archive(
+    name = "bazel-compilation-database",
+    sha256 = "11d7bccd02912ce9ee48676152623afef93fc448f38ff7c37ee6962841a0cb6c",
+    strip_prefix = "bazel-compilation-database-e8f3feb64e4d0c13a00b92bbc779e08ec36f68f1",
+    urls = ["https://github.com/grailbio/bazel-compilation-database/archive/e8f3feb64e4d0c13a00b92bbc779e08ec36f68f1.zip"],
+)
+
+http_archive(
+    name = "abseil-cpp",
+    sha256 = "66149b0bda51d35189d3db4058cb475c22abd1a52046331e16cef7ae7682eff2",
+    strip_prefix = "abseil-cpp-72e09a54d993b192db32be14c65adf7e9bd08c31",
+    urls = ["https://github.com/abseil/abseil-cpp/archive/72e09a54d993b192db32be14c65adf7e9bd08c31.zip"],
+)
+
+http_archive(
+    name = "googletest",
+    strip_prefix = "googletest-master",
+    urls = ["https://github.com/google/googletest/archive/master.zip"],
+)
